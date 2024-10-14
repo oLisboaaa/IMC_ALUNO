@@ -2,25 +2,27 @@ package aluno;
 
 public class Aluno extends Pessoa {
     private double nota;
-    private double precensa;
-    
-    public Pessoa(String nome, int cpf, double peso, double altura, double nota, double precensa){
-        super(nome, cpf, peso, altura)
+    private double presenca;
+
+    public Aluno(String nome, String cpf, double peso, double altura, double nota, double presenca){
+        super(nome, cpf, peso, altura);
         this.nota = nota;
-        this.precensa = precensa;
-    }
-    
-    public double getNota(){
-        return nota;
-        
-    }
-    
-    public void setNota(){
-        if (nota > 0 || nota <10){
-            nota = nota;
-        }else{
-            // add msg de erro
-        }
+        this.presenca = presenca;
     }
 
+    public double getNota(){
+        return nota;
+    }
+
+    public void setNota(double nota){
+        this.nota = nota;
+    }
+
+    public double getPresenca(){
+        return presenca;
+    }
+
+    public void setPresenca(double presenca){
+        this.presenca = presenca;
+    }
 }
